@@ -1,11 +1,11 @@
 .HeaderContainer{
    min-height: 15vh;
     display: flex;
-    padding: 2rem;
+    padding: .5rem;
     justify-content: space-around;
     align-items: center;
     background-color: var(--background-color);
-    border: 2px solid red;
+    
 }
 .logoName{
     border: 2px solid var(--background-color);
@@ -19,7 +19,7 @@
 }
 
 .logoLink{
-    border: 2px solid white;
+
     padding: 2rem;
     text-align: center;
     
@@ -32,7 +32,7 @@ a{
     font-family: var(--secondary-font);
 }
 .searchContainer{
-    border: 2px solid red;
+  
     padding: 1rem;
 }
 .inputBox{

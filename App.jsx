@@ -1,8 +1,9 @@
 
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import Header from './assets/components/Header/Header'
+import Header from './components/Header/Header'
 import './global.css'
+import Profile from './pages/Profile/Profile'
 
 function App() {
  
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <Header/>
+      <Profile/>
     </>
   )
 }
