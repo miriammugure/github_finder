@@ -1,104 +1,166 @@
-.profileContainer{
-    padding: 2rem;
-    min-height: 100vh;
-    border: 2px solid red;
-    display: flex;
+.profileContainer {
+  padding: 2rem;
+  min-height: 100vh;
+  min-width: 100vw;
+  border: 2px solid black;
+  display: flex;
 }
-.profile{
-    border: 2px solid black;
-    padding: 2rem;
+.profile {
+  border: 2px solid red;
+  padding: .5rem;
+  width: 20%;
 }
-.person{
-    border: 2px solid red;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    align-items: center;
-    text-transform: capitalize;
+.person {
+ 
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 2px solid red;
+  align-items: center;
+  /* text-transform: capitalize; */
 }
 .profileImage {
-   width: 100%;
-   height:10rem;
-   /* border-radius: 50%; */
-   border: 2px solid green;  
-}
-.github{
-    text-transform: capitalize;
-    font-family: var(--primary-font);
-    font-family: 2rem;
-}
-.name{
-    border: 2px solid green;
-    width: 100%;
-}
-.redirect{
-    display: flex;
-    background-color: var(--background-color);
-    width: 100%;
-    /* height: 4rem; */
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-    border-radius: 4px;
-}
-.redirect a{
-    text-decoration: none;
-    font-size: 1rem;
-    text-transform: capitalize;
-    color: var(--white-color);
-}
-.redirect svg{
-    font-size: 1rem;
-    fill: var(--white-color);
-}
-.location{
-    display: flex;
-    width: 100%;
-
-   
-    gap: 1rem;
-    border-radius: 4px;
-    border: 2px solid green;
-   
-}
-.location p{
-font-size: 1rem;
+  width: 100%;
+  /* height: 10rem; */
+  /* border-radius: 50%; */
 
 }
-.location svg{
-    font-size: 1rem;
-    fill: var(--background-color);   
+.profileImage img{
+  width:100%;
+  display: block;
+  height: 100%;
 }
-.repo{
-    display: flex;
-    border: 2px solid green;
-    width: 100%;
-    align-items: center;
-  
-    gap: 1rem;
-    border-radius: 4px;
-  
+/* .github {
+  text-transform: capitalize;
+  font-family: var(--primary-font);
+  font-family: 2rem;
+} */
+.github {
+  font-family: var(--primary-font);
+  border: 2px solid green;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: .3rem;
+  /* width: 100%; */
+  font-family: 2rem;
+  gap: .5rem;
 }
-.followers{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    border: 2px solid green;
-    border-radius: 4px;
-    width: 100%;
-     
+.redirect {
+  display: flex;
+  background-color: var(--background-color);
+  width: 100%;
+  /* height: 4rem; */
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 4px;
+}
+.redirect a {
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: capitalize;
+  color: var(--white-color);
+}
+.redirect svg {
+  font-size: 1rem;
+  fill: var(--white-color);
+}
+.location {
+  display: flex;
+  width: 100%;
+
+  gap: 1rem;
+  border-radius: 4px;
+
+}
+.location p {
+  font-size: 1rem;
+}
+.location svg {
+  font-size: 1rem;
+  fill: var(--background-color);
+}
+.repo {
+  display: flex;
+ 
+  width: 100%;
+  align-items: center;
+
+  gap: 1rem;
+  border-radius: 4px;
+}
+.followers {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  border-radius: 4px;
+  width: 100%;
 }
 
-.following{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    border: 2px solid green;
-    border-radius: 4px;
-   
+.following {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+
+  border-radius: 4px;
 }
-.details{
-    border:2px solid green;
+.details {
+  border: 2px solid green;
+  min-height: 100vh;
+  width: 80%;
+}
+.repositoriesContainer {
+  display: flex;
+  flex-direction: column;
+}
+.repositoriesCard {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  padding: 1rem;
+  border: 2px solid red;
+}
+.repocard {
+  border: 2px solid black;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.reponame {
+  display: flex;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  border: 2px solid green;
+  padding: 0.5rem;
+}
+.repodetails {
+  padding: 0.5rem;
+  border: 2px solid red;
+  width: 80%;
+  text-transform: capitalize;
+}
+.repominor {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 0.5rem;
+  border: 2px solid yellow;
+}
+.forks {
+  display: flex;
+
+  border: 2px solid green;
+}
+.star {
+  display: flex;
+  border: 2px solid green;
 }

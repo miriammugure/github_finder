@@ -1,67 +1,59 @@
-.HeaderContainer{
-   min-height: 15vh;
-    display: flex;
-    padding: .5rem;
-    justify-content: space-around;
-    align-items: center;
-    background-color: var(--background-color);
-    
+.HeaderContainer {
+  min-height: 15vh;
+  display: flex;
+  padding: 0.5rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--background-color);
 }
-.logoName{
-    border: 2px solid var(--background-color);
-    padding: 0.5rem 0.8rem;
-    text-align: center;
+.logoName {
+  border: 2px solid var(--background-color);
+  padding: 0.5rem 0.8rem;
+  text-align: center;
 }
-.logoName h1{
-    text-transform: uppercase;
-    font-family: var(--primary-font);
-    color: var(--font-color);
+.logoName h1 {
+  text-transform: uppercase;
+  font-family: var(--primary-font);
+  color: var(--font-color);
 }
 
-.logoLink{
-
-    padding: 2rem;
-    text-align: center;
-    
+.logoLink {
+  padding: 2rem;
+  text-align: center;
 }
 .logoLink p,
-a{
-    text-transform: capitalize;
-    font-size: 1.5rem;
-    color: var(--font-color);
-    font-family: var(--secondary-font);
+a {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  color: var(--font-color);
+  font-family: var(--secondary-font);
 }
-.searchContainer{
-  
-    padding: 1rem;
+.searchContainer {
+  padding: 1rem;
 }
-.inputBox{
-    display: flex;
-    
+.inputBox {
+  display: flex;
 }
-input{
-    height: 2rem;
-    padding: 0.5rem;
+input {
+  height: 2rem;
+  padding: 0.5rem;
 }
-button{
-    padding: 0.5rem;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
+button {
+  padding: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
 }
-@media screen and (max-width:748px) {
-  .inputBox{
+@media screen and (max-width: 748px) {
+  .inputBox {
     display: flex;
     flex-direction: column;
     gap: 2rem;
   }
-  
-    
 }
-@media screen and (max-width:664px) {
-  .HeaderContainer{
+@media screen and (max-width: 664px) {
+  .HeaderContainer {
     display: flex;
     flex-direction: column;
   }
-
 }
