@@ -11,6 +11,9 @@
   --primary-font: "Poppins", Sans-serif;
   --secondary-font: "Josefin Sans", Sans-serif;
   --white-color: #fff;
+  --top-color: #f1f1e6;
+  --bottom-color: #fff7d6;
+  --para-color:#07072b;
 }
 html {
   overflow-x: hidden;

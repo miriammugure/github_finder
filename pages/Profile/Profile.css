@@ -7,11 +7,10 @@
 }
 .profile {
   border: 2px solid red;
-  padding: .5rem;
+    padding: 0.5rem;
   width: 20%;
 }
 .person {
- 
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -24,10 +23,9 @@
   width: 100%;
   /* height: 10rem; */
   /* border-radius: 50%; */
-
 }
-.profileImage img{
-  width:100%;
+.profileImage img {
+  width: 100%;
   display: block;
   height: 100%;
 }
@@ -42,10 +40,10 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: .3rem;
+  padding: 0.3rem;
   /* width: 100%; */
   font-family: 2rem;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 .redirect {
   display: flex;
@@ -73,7 +71,6 @@
 
   gap: 1rem;
   border-radius: 4px;
-
 }
 .location p {
   font-size: 1rem;
@@ -84,7 +81,7 @@
 }
 .repo {
   display: flex;
- 
+
   width: 100%;
   align-items: center;
 
@@ -109,41 +106,69 @@
   border-radius: 4px;
 }
 .details {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   min-height: 100vh;
   width: 80%;
 }
 .repositoriesContainer {
   display: flex;
+  /* border: 2px solid red; */
   flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+.listrepos {
+  list-style: none;
 }
 .repositoriesCard {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-content: space-around;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  /* justify-content: space-around;
+  align-items: center; */
   row-gap: 2rem;
   column-gap: 2rem;
+  gap: 2rem;
   padding: 1rem;
-  border: 2px solid red;
+  /* border: 2px solid yellow; */
+}
+.repositoriesCard ul {
+  grid-template-columns: auto auto;
+  flex-wrap: wrap;
+  display: grid;
+  column-gap: 2rem;
 }
 .repocard {
-  border: 2px solid black;
+  border: 2px solid green;
   width: 100%;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
 }
 .reponame {
   display: flex;
   gap: 0.5rem;
-  text-transform: capitalize;
-  border: 2px solid green;
+  /* text-transform: capitalize; */
+  /* border: 2px solid green; */
   padding: 0.5rem;
+}
+.top {
+  background-color: var(--top-color);
+  padding: 1rem;
+  font-family: var(--primary-font);
+}
+.reponame {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.bottom {
+  background-color: var(--bottom-color);
+  padding: 1rem;
+  font-family: var(--primary-font);
 }
 .repodetails {
   padding: 0.5rem;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   width: 80%;
   text-transform: capitalize;
 }
@@ -153,14 +178,55 @@
   align-items: center;
   gap: 1rem;
   padding-inline: 0.5rem;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
 }
 .forks {
   display: flex;
 
-  border: 2px solid green;
+  /* border: 2px solid green; */
 }
 .star {
   display: flex;
+  /* border: 2px solid green; */
+}
+.followersContainer{
+  min-height: 100vh;
   border: 2px solid green;
+}
+.ActualContainer{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.followersCard{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+  align-items: center;
+  border: 2px solid black;
+  width: 15rem;
+  height: 10rem;
+  background-color: var(--top-color);
+}
+.followersimage{
+  width: 5rem;
+  height: 4rem;
+  border: 2px solid red;
+}
+.followersimage img{
+  width: 100%;
+  height: 100%;
+  display: block;
+
+}
+.followersName{
+  font-family: var(--primary-font);
+  color: var(--para-color);
+  font-size: 1rem;
+}
+.followersLink{
+  font-size: 1rem;
+  font-family: var(--primary-font);
+  color: var(--para-color);
 }

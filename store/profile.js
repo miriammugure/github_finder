@@ -1,5 +1,5 @@
-import { create } from 'zustand';
-import UserApi from '../UserApi';
+import { create } from "zustand";
+import UserApi from "../UserApi";
 
 const useProfileStore = create((set) => ({
   profile: {},
@@ -18,4 +18,3 @@ const useProfileStore = create((set) => ({
 }));
 
 export default useProfileStore;
-
