@@ -8,7 +8,7 @@ const useRepoStore = create((set) => ({
     set({ isLoading: true });
     try {
       const reposData = await RepositoryApi();
-      console.log(reposData);
+      // console.log(reposData);
       set({ repository: reposData, isLoading: false });
     } catch (error) {
       set({ isLoading: false, error: error.message });

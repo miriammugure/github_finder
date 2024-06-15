@@ -5,6 +5,9 @@
   justify-content: space-around;
   align-items: center;
   background-color: var(--background-color);
+  position: fixed;
+  min-width: 100vw;
+  z-index: 1;
 }
 .logoName {
   border: 2px solid var(--background-color);

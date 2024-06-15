@@ -9,7 +9,7 @@ const useProfileStore = create((set) => ({
     set({ isLoading: true });
     try {
       const profileData = await UserApi();
-      console.log(profileData);
+      // console.log(profileData);
       set({ profile: profileData, isLoading: false });
     } catch (error) {
       set({ error: error.message, isLoading: false });

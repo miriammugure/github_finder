@@ -22,10 +22,10 @@ function Repositories() {
     <div>
       <ul>
         {repository.map(
-          ({ name, forks_count, stargazers_count, description }) => (
-            <li className="listrepos">
-              {name}
-              {forks_count},{stargazers_count},{description}
+          ({ id, name, forks_count, stargazers_count, description }) => (
+            <li className="listrepos" key={id}>
+              {/* {name}
+              {forks_count},{stargazers_count},{description} */}
               <div className="repocard">
                 <div className="top">
                   <div className="reponame">
