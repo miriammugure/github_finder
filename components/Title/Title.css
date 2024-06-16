@@ -1,7 +1,3 @@
-.TitleContainer {
-  width: 100%;
-  border: 2px solid green;
-}
 .TitleContainer p {
   text-transform: capitalize;
   text-align: center;

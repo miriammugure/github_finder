@@ -13,6 +13,7 @@ import "./Profile.css";
 
 function Profile() {
   const { username } = useParams();
+
   const {
     profile,
     repository,
@@ -31,9 +32,21 @@ function Profile() {
     fetchData: state.fetchData,
   }));
 
+  const handleSearch = (e, username) => {
+    e.preventDefault();
+    if (username) {
+      fetchData(username);
+    }
+  };
+
   useEffect(() => {
     fetchData(username);
-  }, [fetchData, username]);
+  }, [fetchData]);
+
+  const defaultUsername = "miriammugure";
+  useEffect(() => {
+    fetchData(defaultUsername);
+  }, [fetchData]);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -140,34 +153,29 @@ function Profile() {
             <div className="ActualContainer">
               <ul className="ListContainerFollowers">
                 {people_followers.length > 0 ? (
-                  people_followers.map(
-                    ({ id, login, avatar_url, html_url }) => (
-                      <li className="followersList" key={id}>
-                        <div className="followersCard">
-                          <div className="followersImage">
-                            <img src={avatar_url} alt={`image of ${login}`} />
-                          </div>
-                          <div className="followersName">
-                            <p>{login}</p>
-                          </div>
-                          <div className="followersLink">
-                            <div className="linkDetails">
-                              <a
-                                href={html_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <button className="followers-btn">
-                                  <MdOutlineLink />
-                                  <p>view {login}</p>
-                                </button>
-                              </a>
-                            </div>
+                  people_followers.map(({ id, login, avatar_url }) => (
+                    <li className="followersList" key={id}>
+                      <div className="followersCard">
+                        <div className="followersImage">
+                          <img src={avatar_url} alt={`image of ${login}`} />
+                        </div>
+                        <div className="followersName">
+                          <p>{login}</p>
+                        </div>
+                        <div className="followersLink">
+                          <div className="linkDetails">
+                            <button
+                              className="followers-btn"
+                              onClick={(e) => handleSearch(e, login)}
+                            >
+                              <MdOutlineLink />
+                              <p>view {login}</p>
+                            </button>
                           </div>
                         </div>
-                      </li>
-                    ),
-                  )
+                      </div>
+                    </li>
+                  ))
                 ) : (
                   <div>No followers found</div>
                 )}
@@ -180,34 +188,29 @@ function Profile() {
             <div className="ActualContainer">
               <ul className="ListContainerFollowers">
                 {people_following.length > 0 ? (
-                  people_following.map(
-                    ({ id, login, avatar_url, html_url }) => (
-                      <li className="followersList" key={id}>
-                        <div className="followersCard">
-                          <div className="followersImage">
-                            <img src={avatar_url} alt={`image of ${login}`} />
-                          </div>
-                          <div className="followersName">
-                            <p>{login}</p>
-                          </div>
-                          <div className="followersLink">
-                            <div className="linkDetails">
-                              <a
-                                href={html_url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <button className="followers-btn">
-                                  <MdOutlineLink />
-                                  <p>view {login}</p>
-                                </button>
-                              </a>
-                            </div>
+                  people_following.map(({ id, login, avatar_url }) => (
+                    <li className="followersList" key={id}>
+                      <div className="followersCard">
+                        <div className="followersImage">
+                          <img src={avatar_url} alt={`image of ${login}`} />
+                        </div>
+                        <div className="followersName">
+                          <p>{login}</p>
+                        </div>
+                        <div className="followersLink">
+                          <div className="linkDetails">
+                            <button
+                              className="followers-btn"
+                              onClick={(e) => handleSearch(e, login)}
+                            >
+                              <MdOutlineLink />
+                              <p>view {login}</p>
+                            </button>
                           </div>
                         </div>
-                      </li>
-                    ),
-                  )
+                      </div>
+                    </li>
+                  ))
                 ) : (
                   <div>No following found</div>
                 )}

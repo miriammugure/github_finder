@@ -2,6 +2,7 @@ const fetchAllData = async (username) => {
   const followersResponse = await fetch(
     `https://api.github.com/users/${username}/followers`,
   );
+
   const followingResponse = await fetch(
     `https://api.github.com/users/${username}/following`,
   );

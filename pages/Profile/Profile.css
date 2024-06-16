@@ -2,10 +2,10 @@
   padding: 2rem;
   min-height: 100vh;
   min-width: 100vw;
-  border: 2px solid black;
   display: flex;
   padding-top: 8rem;
 }
+
 .profile {
   /* border: 2px solid red; */
   padding: 0.5rem;
@@ -114,18 +114,19 @@
 }
 .repositoriesContainer {
   display: flex;
+  /* padding-top: 2rem; */
   margin-left: 20rem;
-  /* border: 2px solid red; */
+
   flex-direction: column;
   min-height: 100vh;
-  width: 99%;
+  min-width: 75vw;
 }
 .listrepos {
   list-style: none;
 }
 .repositoriesCard {
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
 
   /* justify-content: space-around;
   align-items: center; */
@@ -133,14 +134,16 @@
   column-gap: 2rem;
   gap: 2rem;
   padding: 1rem;
-  /* border: 2px solid yellow; */
 }
 .repositoriesCard ul {
   grid-template-columns: auto auto;
   flex-wrap: wrap;
   display: grid;
   gap: 2rem;
+  /* align-items: center; */
+  justify-content: center;
 }
+
 .repocard {
   /* border: 2px solid green; */
   width: 100%;
@@ -194,23 +197,29 @@
 }
 .followersContainer {
   min-height: 100vh;
-  /* border: 2px solid green; */
+
   margin-left: 20rem;
-  width: 99%;
+  min-width: 75vw;
+
+  /* flex-wrap: wrap;
+  align-items: center; */
 }
-.ActualContainer {
-  display: flex;
+.ActualContainer ul {
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+
+  /* align-items: center;
+  justify-content: center; */
   padding: 1rem;
+  min-width: 100%;
 }
+
 .followersCard {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid black;
+
   width: 15rem;
   height: 15rem;
   background-color: var(--top-color);

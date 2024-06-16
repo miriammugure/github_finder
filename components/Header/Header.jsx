@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import useStore from "../../store/store"; // Make sure the path to your store is correct
+import React, { useState, useEffect } from "react";
+import useStore from "../../store/store";
 import "./Header.css";
 
 function Header() {
-  const [username, setUsername] = useState("miriammugure");
+  const [username, setUsername] = useState();
   const { fetchData } = useStore((state) => ({
     fetchData: state.fetchData,
   }));
@@ -14,7 +14,7 @@ function Header() {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    fetchData(username); // Fetch data using the provided username
+    fetchData(username);
   };
 
   return (
